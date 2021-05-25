@@ -1,0 +1,24 @@
+h3 {
+  margin: 1.5rem;
+}
+.education {
+  margin-bottom: 1rem;
+}
+/* .education .item {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(77, 72, 72, 0.2);
+} */
+.education .item {
+  width: 100%;
+  display: inline-grid;
+  /* justify-content: center;
+  align-items: flex-end; */
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 8px;
+  padding: 1rem;
+  /* border-bottom: 1px solid rgba(77, 72, 72, 0.2); */
+  /* margin-bottom: 1rem; */
+}

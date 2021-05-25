@@ -1,0 +1,12 @@
+.header {
+  /* min-height: 100vh; */
+  display: flex;
+}
+
+.home {
+  height: 60vh;
+}
+
+.name {
+  width: 500px;
+}
