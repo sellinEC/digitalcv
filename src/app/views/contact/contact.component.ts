@@ -18,7 +18,7 @@ export class ContactComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
       subject: new FormControl('', [Validators.required, Validators.minLength(3)]),
       message: new FormControl('', [Validators.required, Validators.minLength(11)]),
-      checkbox: new FormControl('', Validators.required) 
+      // checkbox: new FormControl('', Validators.required) 
     })
 
   }
@@ -27,7 +27,7 @@ export class ContactComponent implements OnInit {
   get email() { return this.contactForm.get('email') as FormControl  } 
   get subject() { return this.contactForm.get('subject') as FormControl  } 
   get message() { return this.contactForm.get('message') as FormControl  } 
-  get checkbox() { return this.contactForm.get('checkbox') as FormControl  } 
+  // get checkbox() { return this.contactForm.get('checkbox') as FormControl  } 
 
   
   onSub() {

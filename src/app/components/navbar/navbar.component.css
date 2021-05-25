@@ -33,6 +33,7 @@ a {
 }
 i {
   color: rgba(255, 255, 255, 0.787);
+  font-size: 1.5rem;
 }
 a:hover {
   color: rgb(28, 131, 10);

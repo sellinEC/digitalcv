@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EducationComponent } from './components/content/education/education.component';
 import { SkillsComponent } from './components/content/skills/skills.component';
 import { ExperienceComponent } from './components/content/experience/experience.component';
+import { SentComponent } from './views/sent/sent.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { ExperienceComponent } from './components/content/experience/experience.
     EducationComponent,
     SkillsComponent,
     ExperienceComponent,
+    SentComponent,
     
   ],
   imports: [

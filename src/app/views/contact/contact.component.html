@@ -1,60 +1,55 @@
-
 <div class="header container form col-8">
-  <h3 class="text-center">Contact me</h3>
+  <h3 class="text-center">Kontakta mig</h3>
   <hr class="my-3">
-    <form (ngSubmit)="onSub()">
-        <div class="mb-3">
-         
-            <form [formGroup]="contactForm" (ngSubmit)="onSub()" >
-             
-                <!-- Name input -->
-                <div class=" mb-4">
-                    <label class="form-label" for="form4Example1">Name:</label>
-                  <input type="text" id="form4Example1" class="form-control form-required" formControlName="name" 
-                  [class.is-valid]="name.valid" [class.is-invalid]="name.invalid && (name.dirty && name.touched)" />
-                  <small *ngIf="name.invalid && (name.dirty && name.touched)" class="text-danger">You have to have a more powerful name</small>
-                </div>
-              
-                <!-- Email input -->
-                <div class="form-outline-message mb-4">
-                    <label class="form-label" for="form4Example2">Email address:</label>
-                  <input type="email" id="form4Example2" class="form-control form-required" formControlName="email"
-                  [class.is-valid]="email.valid" [class.is-invalid]="email.invalid && (email.dirty && email.touched)" />
-                </div>
-                
-                <div class="form-outline-message mb-4">
-                  <label class="form-label" for="form4Example1">Subject:</label>
-                <input type="text" id="form4Example1" class="form-control form-required" formControlName="subject" 
-                [class.is-valid]="subject.valid" [class.is-invalid]="subject.invalid && (subject.dirty && subject.touched)" />
-              </div>
+  <form (ngSubmit)="onSub()">
+    <div class="mb-3">
 
-                <!-- Message input -->
-                <div class="form-outline-message mb-4">
-                    <label class="form-label" for="form4Example3">Message:</label>
-                  <textarea class="form-control form-required" id="form4Example3" rows="5" formControlName="message"
-                  [class.is-valid]="message.valid" [class.is-invalid]="message.invalid && (message.dirty && message.touched)"></textarea>
-                </div>
-              
-                <!-- Checkbox -->
-                <div class="form-check d-flex justify-content-center mb-4">
-                  <input
-                    class="form-check-input me-2"
-                    type="checkbox"
-                    value=""
-                    id="form4Example4"
-                    formControlName="checkbox"
-                    
-                  />
-                  <label class="form-check-label" for="form4Example4">
-                    Im not a robot
-                  </label>
-                </div>
-              
-                <!-- Submit button -->
-                <button routerLink="/" [disabled]="!contactForm.valid" type="submit" class="btn btn-warning mb-4">Send</button>
-             
-              </form>
-              
+      <form [formGroup]="contactForm" (ngSubmit)="onSub()">
+
+        <!-- Name input -->
+        <div class=" mb-4">
+          <label class="form-label" for="form4Example1">Namn:</label>
+          <input type="text" id="form4Example1" class="form-control form-required" formControlName="name"
+            [class.is-valid]="name.valid" [class.is-invalid]="name.invalid && (name.dirty && name.touched)" />
+          <small *ngIf="name.invalid && (name.dirty && name.touched)" class="text-danger">För kort namn</small>
         </div>
-    </form>
+
+        <!-- Email input -->
+        <div class="form-outline-message mb-4">
+          <label class="form-label" for="form4Example2">Mailadress:</label>
+          <input type="email" id="form4Example2" class="form-control form-required" formControlName="email"
+            [class.is-valid]="email.valid" [class.is-invalid]="email.invalid && (email.dirty && email.touched)" />
+          <small *ngIf="email.invalid && (email.dirty && email.touched)" class="text-danger">SKriv en giltig
+            mailadress</small>
+        </div>
+
+        <div class="form-outline-message mb-4">
+          <label class="form-label" for="form4Example1">Ämne:</label>
+          <input type="text" id="form4Example1" class="form-control form-required" formControlName="subject"
+            [class.is-valid]="subject.valid"
+            [class.is-invalid]="subject.invalid && (subject.dirty && subject.touched)" />
+          <small *ngIf="subject.invalid && (subject.dirty && subject.touched)" class="text-danger">Ämnesrad för
+            kort</small>
+        </div>
+
+        <!-- Message input -->
+        <div class="form-outline-message mb-4">
+          <label class="form-label" for="form4Example3">Meddelande:</label>
+          <textarea class="form-control form-required" id="form4Example3" rows="5" formControlName="message"
+            [class.is-valid]="message.valid"
+            [class.is-invalid]="message.invalid && (message.dirty && message.touched)"></textarea>
+          <small *ngIf="message.invalid && (message.dirty && message.touched)" class="text-danger">Meddelandet är för
+            kort</small>
+        </div>
+
+
+
+        <!-- Submit button -->
+        <button routerLink="/sent" [disabled]="!contactForm.valid" type="submit"
+          class="btn btn-success mb-4">Send</button>
+
+      </form>
+
+    </div>
+  </form>
 </div>
